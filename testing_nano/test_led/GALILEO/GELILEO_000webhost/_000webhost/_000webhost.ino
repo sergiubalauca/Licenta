@@ -8,7 +8,7 @@ byte mac[] = {
 // Enter the IP address for Arduino, as mentioned we will use 192.168.0.16
 // Be careful to use , insetead of . when you enter the address here
 IPAddress ip(192, 168, 0, 154); // asta e adresa asignata
-//IPAddress ip( 169,254,183,87);
+
 char value;
 
 double mVperAmp = 66; // use 100 for 20A Module and 185 for 5 Module
@@ -23,7 +23,7 @@ char commandbuffer[100];
 byte bluetoothRead;
 float a;
 
-char server[] = "192.168.0.101"; // IMPORTANT: If you are using XAMPP you will have to find out the IP address of your computer and put it here (it is explained in previous article). If you have a web page, enter its address (ie. "www.yourwebpage.com")
+char server[] = "31.220.104.175"; // IMPORTANT: If you are using XAMPP you will have to find out the IP address of your computer and put it here (it is explained in previous article). If you have a web page, enter its address (ie. "www.yourwebpage.com")
 
 // Initialize the Ethernet server library
 EthernetClient client;
@@ -82,7 +82,7 @@ void loop()
       client.print("&value2="); //am pus & pt a doua citire
       client.print(Voltage2);
       client.println(" HTTP/1.1"); // Part of the GET request
-      client.println("Host: 192.168.0.101"); // IMPORTANT: find out the IP address of your computer and put it here
+      client.println("Host: 31.220.104.175"); // IMPORTANT: find out the IP address of your computer and put it here
       client.println("Connection: close"); // Part of the GET request telling the server that we are over transmitting the message
       client.println(); // Empty line
       client.println(); // Empty line

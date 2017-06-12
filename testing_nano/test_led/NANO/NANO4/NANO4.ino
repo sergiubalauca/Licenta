@@ -44,6 +44,7 @@ void loop() {
   if (Serial.available()) {
 
     Serial.println(current);
+    Serial.println(analogRead(currentPin));
 
   }
   // Give the server some time to receive the data and store it. I used 10 seconds here. Be advised when delaying. If u use a short delay, the server might not capture data because of Arduino transmitting new data too soon.
