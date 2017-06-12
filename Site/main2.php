@@ -23,7 +23,7 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
       <li>	  <a href="http://localhost/myfiles/get_data.php">Live readings</a></li>
-      <li><a href="#">$$$</a></li>
+      <li><a href="fetchJoin.php">Generate Cost</a></li>
       <li><a href="#">Readings history</a></li>
     </ul>
   </div>

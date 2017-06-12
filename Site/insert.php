@@ -1,6 +1,8 @@
 
 <?php
-	$servername = "localhost";
+		require 'defineVariable.php';
+	
+		$servername = "localhost";
 		$username = "root";
 		$password = "password";
 		$dbname = "testare";
@@ -13,8 +15,8 @@
 		} 
 
 		$sql = "INSERT INTO device (description) VALUES ('".$_POST["name"]."');";
-		$sql .= "INSERT INTO sensor (ID_Device) VALUES (LAST_INSERT_ID())";
-		/* $sql .= "INSERT INTO sensor (ID_Device) SELECT id FROM device"; */
+		/* $sql .= "INSERT INTO sensor (ID_Device) VALUES (LAST_INSERT_ID())"; */
+		$sql .= "INSERT INTO sensor (ID_Device) SELECT id FROM device WHERE id = LAST_INSERT_ID()";
 		
 		if (mysqli_multi_query($conn, $sql)) {
 					
