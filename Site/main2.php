@@ -25,30 +25,31 @@
       <li>	  <a href="http://localhost/myfiles/get_data.php">Live readings</a></li>
       <li><a href="fetchJoin.php">Generate Cost</a></li>
       <li><a href="#">Readings history</a></li>
+	  <li><a href="index2.php?action=logout">Logout</a></li>
     </ul>
   </div>
 </nav>
   
   <div class="jumbotron" id="box-wrapper">
-			<div class="container">
-				<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4></div">
 					<div class="col-md-4></div">
-					<div class="col-md-4></div">
-					<h1><?php
-						session_start();
-						echo 'Welcome '.$_SESSION['username'];
-						echo '<br><a href="index2.php?action=logout">Logout</a>';
-						?>			
+						<p class = "container-fluid box-wrapper h1">
+						<?php
+							session_start();
+							echo 'Welcome, '.$_SESSION['username'];
+						?>		</h>	
 									</br>
 									</br>
 									</br>
 									</br>
-						Here you can see readings from the unit along with spent energy translated into money.</h1>
+						<p class = "container-fluid box-wrapper" h1>Here you can see readings from the unit along with spent energy translated into money.</p>
 					<div class="col-md-4></div">
 				</div>
 			</div>
 		</div>
-
+	</div>
 
 </body>
 </html>
