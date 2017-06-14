@@ -7,4 +7,6 @@
 	$name = (mysqli_num_rows($result)==1) ? mysqli_fetch_assoc($result) : null;
     	
     mysqli_close($con);
+	
+	
 ?>

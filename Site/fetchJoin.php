@@ -53,22 +53,22 @@ session_start();
 
 <div   class="jumbotron2 container page-header"
 			<div class="row">
-					<div >
-							<p class = "box-wrapper h1 container-fluid">
-								Average wattage: <?php echo $sum; ?>
-							</p>
-							
-							<p class = "box-wrapper h1 container-fluid">
-								Energy consumption: <?php echo $sum * ($num_rows * 5) / 720000; ?> KWh
-							</p>
-							
-							<p class = "box-wrapper h1 container-fluid">
-								Cost: <?php echo $sum * ($num_rows * 5) / 720000 * $costKWh; ?> Lei
-							</p>
+						<div >
+								<p class = "box-wrapper h1 container-fluid">
+									Average wattage: <?php echo $sum; ?>
+								</p>
+								
+								<p class = "box-wrapper h1 container-fluid">
+									Energy consumption: <?php echo $sum * ($num_rows * 5) / 720000; ?> KWh
+								</p>
+								
+								<p class = "box-wrapper h1 container-fluid">
+									Cost: <?php echo $sum * ($num_rows * 5) / 720000 * $costKWh; ?> Lei
+								</p>
 						</div>
-						<div class="col-md-4></div">
-					</div>
-			
+								<div class="col-md-4></div">
+								</div>
+			</div>
 		
 			
 </div>
@@ -79,15 +79,19 @@ session_start();
 		<div class = "container">
 				<table class = "table-hover table" border="2" cellspacing="3" cellpadding="4">
 				  <tr>
-						<td>Power</td>
-						<td>TIME</td>
-						<td>TIME_DEVICE</td>
-						<td>Device</td>
+						<td>POWER</td>
+						<td>RECORDING TIME</td>
+						<td>REGISTER TIME DEVICE</td>
+						<td>DEVICE</td>
 						
 				 </tr>
 		</div>
 	</div>
 </div>
+<?php
+	require 'loadLastDevice.php';
+	$id = $name['id'];
+?>
 <?php
     // Connect to database
 	
@@ -95,10 +99,10 @@ session_start();
     $con=mysqli_connect("localhost","root","password", "testare");
        
 	   $stopTime = date('Y-m-d H:i:s', strtotime('+1 hour'));  /*aici mi-am setat punctul de oprite*/
-
+	
     // Retrieve all records and display them   
     $result = mysqli_query($con,"SELECT time, value, reg_date, description FROM testare.sensor s JOIN testare.device d 
-								ON  s.time > d.reg_date AND s.time < '$stopTime' AND description = '".$_POST["name"]."'");
+								ON  s.time > d.reg_date AND s.time < '$stopTime' AND d.id = '$id' AND description = '".$_POST["name"]."'");
 	
 	$num_rows = mysqli_num_rows($result);
 

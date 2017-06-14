@@ -66,7 +66,7 @@
 		</div>
 	</div>
 	
-	
+
 	<div class="container">
 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog modal-sm">
@@ -108,7 +108,7 @@
 				  <p>Stop recording.</p>
 					<form action="fetchJoin.php?" method="post">
 						Name: <input type="text" readonly name="name" value = "<?php echo $name['description']; ?>"/> <br><br>
-						<br><br>
+							<br><br>
 						 
 				</div>
 				<div class="modal-footer">

@@ -20,8 +20,8 @@
 			  <tr>
 					<td>ID</td>
 					<td>TIME</td>
-					<td>Tensiune</td>
-					<td>Curent</td>
+					<td>Power</td>
+					<td>Current</td>
 			  </tr>
 </div>
 <?php
