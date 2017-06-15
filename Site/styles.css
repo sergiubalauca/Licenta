@@ -38,7 +38,7 @@
 	}
 	#box-wrapper
 	{
-		background-image:url("http://www.clean-energy-ideas.com/wp-content/uploads/2013/07/what-are-wind-turbines.jpg");
+		background-image:url("http://www.androidguys.com/wp-content/uploads/2015/02/streaks.jpg");
 		background-size:cover;
 		background-attachement:fixed;
 		background-position:center;
@@ -68,4 +68,8 @@
     background:#337ab7;
     padding:5px;
     margin-left:69%;
+}
+
+p{
+	color: #2f5687;
 }

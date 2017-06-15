@@ -27,7 +27,9 @@
       <li> <a href="get_data.php">Live readings</a></li>
       <li><a href="fetchJoin.php">Generate Cost</a></li>
       <li><a href="#">Readings history</a></li>
-	  <li><a href="index2.php?action=logout">Logout</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+        <li><a href="index2.php?action=logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -78,7 +80,7 @@
 				<div class="modal-body">
 				  <p>You have to set up a device name.</p>
 					<form action="insert.php?" method="post">
-						Name: <input type="text" name="name" /><br><br>
+						Name: <input type="text" name="name" placeholder="ex: fier de calcat"/><br><br>
 						<br><br>
 						 
 						

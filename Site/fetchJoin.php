@@ -28,7 +28,9 @@ session_start();
       <li>	  <a href="http://localhost/myfiles/get_data.php">Live readings</a></li>
       <li><a href="fetchJoin.php">Generate Cost</a></li>
       <li><a href="#">Readings history</a></li>
-	  <li><a href="index2.php?action=logout">Logout</a></li>
+    </ul>
+	<ul class="nav navbar-nav navbar-right">
+        <li><a href="index2.php?action=logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
 </nav>
@@ -65,9 +67,19 @@ session_start();
 								<p class = "box-wrapper h1 container-fluid">
 									Cost: <?php echo $sum * ($num_rows * 5) / 720000 * $costKWh; ?> Lei
 								</p>
+								
+								<p class = "box-wrapper h1 container-fluid">
+									Recording Interval: <?php echo ($num_rows / 12); ?> Minutes
+								</p>
+								<div class="container">	
+									<div class="page-header">
+										<input type="button" class="btn btn-primary btn-lg btn-info" data-toggle="modal" value="Back" onclick="goBack()"></button>
+									</div>
+								</div>
 						</div>
 								<div class="col-md-4></div">
-								</div>
+								
+								
 			</div>
 		
 			
@@ -119,5 +131,12 @@ session_start();
 
     mysqli_close($con);
 ?>
+
+<script>
+	function goBack() {
+		window.history.back()
+	}
+</script>
+
 </body>
 </html>
