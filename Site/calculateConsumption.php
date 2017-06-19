@@ -17,6 +17,12 @@
 	
 	$num_rows = mysqli_num_rows($result);
 	
+	
+	
+		
+		
+		
+	
 	$sum = 0;
 	$costKWh = 0.3741;
     while($row = mysqli_fetch_array($result))

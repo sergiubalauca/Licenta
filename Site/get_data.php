@@ -25,8 +25,8 @@
     <ul class="nav navbar-nav">
       <li class="active"><a href="main2.php">Home</a></li>
       <li> <a href="get_data.php">Live readings</a></li>
-      <li><a href="fetchJoin.php">Generate Cost</a></li>
-      <li><a href="#">Readings history</a></li>
+      <li><a href="#">Generate Cost</a></li>
+      <li><a href="fetchForChart.php">Readings history</a></li>
     </ul>
 	<ul class="nav navbar-nav navbar-right">
         <li><a href="index2.php?action=logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
@@ -87,7 +87,7 @@
 				</div>
 				<div class="modal-footer">
 				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				  <input type="submit" name = "send" value = "Submit" class="btn btn-primary">
+				  <input type="submit" action = "insertCost.php" name = "send" value = "Submit" class="btn btn-primary">
 				</div>
 				</form>
 			  </div>
@@ -113,11 +113,11 @@
 							<br><br>
 						 
 				</div>
-				<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				  <input type="submit" name = "send" value = "Get Results" class="btn btn-primary">
-				</div>
-				</form>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <input type="submit" name = "send" value = "Get Results" class="btn btn-primary">
+						</div>
+					</form>
 			  </div>
 			  
 			</div>

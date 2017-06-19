@@ -54,7 +54,7 @@ if(isset($_GET['logout']))
   <h2>Welcome</h2>
   <form method = "POST">
 	<div class="imgcontainer">
-		<img src="https://www.arduino.cc/en/uploads/Guide/ArduinoNanoUSBCable.jpg" alt="Avatar" class="avatar">
+		<img src="sigla.png" alt="Avatar" class="avatar">
 	</div>
 	
     <div class="form-group">

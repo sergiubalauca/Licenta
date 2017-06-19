@@ -21,13 +21,13 @@ session_start();
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Power Monitor</a>
+      <a class="navbar-brand">Power Monitor</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="main2.php">Home</a></li>
       <li>	  <a href="http://localhost/myfiles/get_data.php">Live readings</a></li>
-      <li><a href="fetchJoin.php">Generate Cost</a></li>
-      <li><a href="#">Readings history</a></li>
+      <li><a href="#">Generate Cost</a></li>
+      <li><a href="fetchForChart.php">Readings history</a></li>
     </ul>
 	<ul class="nav navbar-nav navbar-right">
         <li><a href="index2.php?action=logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
@@ -118,6 +118,12 @@ session_start();
 	
 	$num_rows = mysqli_num_rows($result);
 
+	$sql = "UPDATE device SET Cost = $sum * ($num_rows * 5) / 720000 * $costKWh, Consumption = $sum * ($num_rows * 5) / 720000 where id = '$id'";
+	if ($con->query($sql) === TRUE) {
+		} else {
+			echo "Error: " . $sql . "<br>" . $con->error;
+		}
+		
     while($row = mysqli_fetch_array($result))
     {      
         echo "<tr>";
