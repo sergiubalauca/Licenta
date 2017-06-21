@@ -24,7 +24,7 @@
 	
 	.poz
 	{
-		text-color = #fff;
+		color = #fff;
 		
 	}
 	
@@ -51,7 +51,7 @@
 		background-repeat:no-repeat;
 		min-height:1000px;
 	}
-	#box-wrapper h1
+	.box-wrapper h1
 	{
 		text-indent: -6cm;
 		color: #ffffff;

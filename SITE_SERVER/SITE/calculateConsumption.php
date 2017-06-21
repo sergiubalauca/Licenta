@@ -9,7 +9,7 @@
    // IMPORTANT: If you are using XAMPP you will have to enter your computer IP address here, if you are using webpage enter webpage address (ie. "www.yourwebpage.com")
     $con=mysqli_connect("93.188.164.20","root","password", "test");
        
-	   $stopTime = date('Y-m-d H:i:s', strtotime('+1 hour'));  /*aici mi-am setat punctul de oprite*/
+	   $stopTime = date('Y-m-d H:i:s', strtotime('+3 hour'));  /*aici mi-am setat punctul de oprite*/
 
     // Retrieve all records and display them   
     $result = mysqli_query($con,"SELECT time, value, reg_date, description FROM test.sensor s JOIN test.device d 
