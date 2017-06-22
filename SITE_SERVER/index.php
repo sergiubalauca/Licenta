@@ -58,7 +58,7 @@ if(isset($_GET['logout']))
 	</div>
 	
     <div class="form-group">
-      <label for="username">Email:</label>
+      <label for="username">Username:</label>
       <input type="text" class="form-control" placeholder="Enter Username" id="username" name="username">
     </div>
     <div class="form-group">
