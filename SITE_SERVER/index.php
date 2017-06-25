@@ -54,7 +54,7 @@ if(isset($_GET['logout']))
   <h2>Welcome</h2>
   <form method = "POST">
 	<div class="imgcontainer">
-		<img src="sigla.png" alt="Avatar" class="avatar">
+		<img src="http://ep.yimg.com/ca/I/yhst-27389313707334_2252_83726335" alt="Avatar" class="avatar">
 	</div>
 	
     <div class="form-group">

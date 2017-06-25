@@ -55,29 +55,23 @@
 		  <ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 			<li data-target="#myCarousel" data-slide-to="1"></li>
-			<li data-target="#myCarousel" data-slide-to="2"></li>
+			
 		  </ol>
 
 		  <!-- Wrapper for slides -->
 		  <div class="carousel-inner">
 			<div class="item active">
-			  <img src="sigla.png" alt="Chania">
-			  <div class="carousel-caption">
-				<h3>FOUR AND A HALF MEN</h3>
-				<p>Team Logo!</p>
-			  </div>
-			</div>
-
-			<div class="item">
-			  <img src="ansamblu2.jpg" alt="Chicago">
+			  <img src="ansamblu2.jpg" alt="ansamblu2">
 			  <div class="carousel-caption">
 				<h3>The system</h3>
 				<p>View of the connected components</p>
 			  </div>
 			</div>
 
+			
+
 			<div class="item">
-			  <img src="nano.jpg" alt="New York">
+			  <img src="nano.jpg" alt="nano">
 			  <div class="carousel-caption">
 				<h3>The portable unit</h3>
 				<p>Displaying live consumption</p>

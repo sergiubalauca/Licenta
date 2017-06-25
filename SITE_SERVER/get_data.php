@@ -67,8 +67,30 @@
 			<button type="button" class="btn btn-primary btn-block btn-lg btn-danger" data-toggle="modal" data-target="#myModal2" id = "stopRec">Stop recording</button>
 		</div>
 	</div>
+	<div class="container">
+		<div class="page-header">
+			<form action="updateRelay.php?" method="post">
+								Name: <input type="text" name="status" placeholder="ex: fier de calcat"/><br><br>
+								<br><br>
+								 
+								
+						</div>
+						<div class="modal-footer">
+						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						  <input type="submit" name = "send" value = "Submit" class="btn btn-primary">
+						</div>
+			</form>
+		
+	</div>
 	
+<form action="relay.php" method="POST">
+   <input class="big_b" type="submit" name="next" value="Next" /> 
+   <input type="submit" name="reset" value="Reset" /> 
+</form>
 
+</script>
+	
+	
 	<div class="container">
 		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog modal-sm">
