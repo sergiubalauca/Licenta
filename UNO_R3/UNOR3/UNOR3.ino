@@ -7,7 +7,8 @@ byte mac[] = {
 //byte mac[] = {  0x98, 0x4F, 0xEE, 0x01, 0xDD, 0xE3 }; conversie de pe modul
 // Enter the IP address for Arduino, as mentioned we will use 192.168.0.16
 // Be careful to use , insetead of . when you enter the address here
-IPAddress ip(192,168,0,17); // asta e adresa asignata
+//IPAddress ip(192,168,43,17); // asta e adresa asignata - PT ORANGE!!! cu shared netword intre ethernet si wireless
+IPAddress ip(192,168,0,17);
 //IPAddress ip( 169,254,183,87);
 char value;
 #define RELAY_ON 0

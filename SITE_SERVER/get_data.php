@@ -70,15 +70,21 @@
 	<div class="container">
 		<div class="page-header">
 			<form action="updateRelay.php?" method="post">
-								Name: <input type="text" name="status" placeholder="ex: fier de calcat"/><br><br>
-								<br><br>
-								 
+								<div class="container">
+								Name: <input type="text" name="status" placeholder="A (On)/ F (0ff)"/><br><br>
+								</div>
+								<div class="container">
+									<div class="radio">
+									  <label><input type="radio" name="status" value="A">On</label>
+									</div>
+									<div class="radio">
+									  <label><input type="radio" name="status" value="F">Off</label>
+									</div> 
+								</div>
 								
-						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						  <input type="submit" name = "send" value = "Submit" class="btn btn-primary">
-						</div>
+									
+						    <input type="submit" name = "send" value = "Submit" class="btn btn-primary">
+						
 			</form>
 		
 	</div>
