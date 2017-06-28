@@ -16,7 +16,7 @@
 <body>
 
 <div class = "table-responsive">
-			<table class = "table-hover table poz" border="2" cellspacing="3" cellpadding="4">
+			<table class = "table-hover table" id ="poz" border="2" cellspacing="3" cellpadding="4">
 			  <tr>
 					<td>ID</td>
 					<td>TIME</td>
