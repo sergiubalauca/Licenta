@@ -69,6 +69,8 @@ void loop() {
 //=================================================================================================================
 float CurrentSense()
 {
+  int maxValue = 0;
+  int minValue = 1023;
   unsigned long currentAcc = 0;
   unsigned int count = 0;
   unsigned long prevMicros = micros() - sampleInterval ;
