@@ -69,9 +69,6 @@ void loop() {
 //=================================================================================================================
 float CurrentSense()
 {
-  int maxValue = 0;
-  int minValue = 1023;
-
   unsigned long currentAcc = 0;
   unsigned int count = 0;
   unsigned long prevMicros = micros() - sampleInterval ;
@@ -79,66 +76,17 @@ float CurrentSense()
   {
     if (micros() - prevMicros >= sampleInterval)
     {
-      if (analogRead(currentPin) > maxValue)
-      {
-        maxValue = analogRead(currentPin);
-      }
-      if (analogRead(currentPin) < minValue)
-      {
-        minValue = analogRead(currentPin);
-      }
       int adc_raw = analogRead(currentPin) - adc_zero;
       currentAcc += (unsigned long)(adc_raw * adc_raw);
       ++count;
       prevMicros += sampleInterval;
     }
   }
-
   float rms = sqrt((float)currentAcc / (float)numSamples) * (75.75 / 1024.0);
   rms = rms - 0.05;
   if (rms < 0.01789)
   {
     rms = 0;
   }
-  //Serial.println(rms);
   return rms;
-}
-
-//=================================================================================================================
-
-//functia de citire voltaj
-float getVPP()
-
-{
-
-  float result;
-
-  int readValue; //value read from the sensor
-
-  int maxValue = 0; // store max value here
-
-  int minValue = 1023; // store min value here
-
-  uint32_t start_time = millis();
-
-  while ((millis() - start_time) < 1000) //sample for 1 Sec
-  {
-    readValue = analogRead(sensorIn);
-    // see if you have a new maxValue
-    if (readValue > maxValue)
-    {
-      /*record the maximum sensor value*/
-      maxValue = readValue;
-    }
-    if (readValue < minValue)
-    {
-      /*record the maximum sensor value*/
-      minValue = readValue;
-    }
-  }
-  // Subtract min from max
-
-  result = ((maxValue - minValue) * 4.70) / 1023.0; // era imultit cu 5.0
-
-  return result;
 }
