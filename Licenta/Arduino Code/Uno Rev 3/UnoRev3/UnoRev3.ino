@@ -5,8 +5,8 @@ byte mac[] = {
   0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED
 };
 
-//IPAddress ip(192,168,43,17); // asta e adresa asignata - PT ORANGE!!! cu shared netword intre ethernet si wireless
-IPAddress ip(192,168,0,17);
+IPAddress ip(192,168,43,17); // asta e adresa asignata - PT ORANGE!!! cu shared netword intre ethernet si wireless
+//IPAddress ip(192,168,0,17);
 //IPAddress ip( 169,254,183,87);
 char value;
 #define RELAY_ON 0
@@ -79,7 +79,7 @@ void loop()
       client.println("Connection: close"); 
       client.println();
       client.println();
-      client.stop()
+      client.stop();
     }
     else {
       // If Arduino can't connect to the server
