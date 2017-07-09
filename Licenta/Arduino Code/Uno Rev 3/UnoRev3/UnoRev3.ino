@@ -39,15 +39,15 @@ void setup()
 
   Ethernet.begin(mac, ip);
 
-  Serial.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
-  Serial.print("IP Address        : ");
-  Serial.println(Ethernet.localIP());
-  Serial.print("Subnet Mask       : ");
-  Serial.println(Ethernet.subnetMask());
-  Serial.print("Default Gateway IP: ");
-  Serial.println(Ethernet.gatewayIP());
-  Serial.print("DNS Server IP     : ");
-  Serial.println(Ethernet.dnsServerIP());
+//  Serial.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n");
+//  Serial.print("IP Address        : ");
+//  Serial.println(Ethernet.localIP());
+//  Serial.print("Subnet Mask       : ");
+//  Serial.println(Ethernet.subnetMask());
+//  Serial.print("Default Gateway IP: ");
+//  Serial.println(Ethernet.gatewayIP());
+//  Serial.print("DNS Server IP     : ");
+//  Serial.println(Ethernet.dnsServerIP());
 }
 
 void loop()
@@ -61,7 +61,7 @@ void loop()
     }
     a = atof(commandbuffer);
     if (i > 0)
-      Serial.println((char*)commandbuffer);
+               //Serial.println((char*)commandbuffer);
     Voltage2 = a;
      AmpsRMS = Voltage2 * 220.0;
 
@@ -82,8 +82,7 @@ void loop()
       client.stop();
     }
     else {
-      // If Arduino can't connect to the server
-      Serial.println("Connection failed, trying again......\n");
+      //      Serial.println("Connection failed, trying again......\n");
        }
       if(true){
        if (client.connect(server, 80)) {
@@ -96,7 +95,7 @@ void loop()
       } 
         if (client.available()) {
               char c = client.read();
-              Serial.print(c);
+              Serial.println(c);
               if(c == 'A'){digitalWrite(Relay_1, RELAY_ON);}
               if(c == 'F'){digitalWrite(Relay_1, RELAY_OFF);}
               client.stop();
@@ -105,7 +104,7 @@ void loop()
       }
      
   }
-  delay(5000);
+  //delay(500);
   
 }
 
