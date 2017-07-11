@@ -1,0 +1,98 @@
+p.container-fluid
+{
+	color:white;
+}	
+	.pozitie
+	{
+		right: 85%;
+		top: 20%;
+		position: absolute;
+		
+	}
+	.pozitieTabelTensiune
+	{
+		right: 67%;
+		top: 20%;
+		position: absolute;
+		
+	}
+	
+	.pozitieTabelSensor
+	{
+		right: 45%;
+		top: 90%;
+		position: relative;
+		
+	}
+	
+	.poz
+	{
+		
+		color: white;
+		
+	}
+	table:hover{
+    
+	color: white;
+	}
+	
+	.pozitieTabelJoin
+	{
+		right: 45%;
+		top: 30%;
+		position: absolute;
+		
+	}
+	#img.source-image 
+	{
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	#box-wrapper
+	{
+		background-image:url("http://www.androidguys.com/wp-content/uploads/2015/02/streaks.jpg");
+		background-size:cover;
+		background-attachement:fixed;
+		background-position:center;
+		background-repeat:no-repeat;
+		min-height:1000px;
+	}
+	.box-wrapper h1
+	{
+		text-indent: -6cm;
+		color: #ffffff;
+		font-family: 'Courier New', Courier, monospace;
+		font-style: oblique;
+		font-size:30px;
+	}
+	
+	.h1
+	{
+		text-indent: -6cm;
+		color: #ffffff;
+		font-family: 'Courier New', Courier, monospace;
+		font-style: oblique;
+		font-size:30px;
+	}
+
+#frm{
+    border:solid gray 1px;
+    width:20%;
+    border-radius:5px;
+    margin:100px auto;
+    background:white;
+    padding:50px;
+}
+
+#btn{
+    color:#fff;
+    background:#337ab7;
+    padding:5px;
+    margin-left:69%;
+}
+
+p{
+	color: #ffffff;
+}
